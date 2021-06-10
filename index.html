@@ -15,7 +15,7 @@
 		
 		<div class="uploadedImage">
 			<form enctype="multipart/form-data" action="uploadfile.php" method="POST">
-				<input name="userfile" type="file" value="Upload file" accept="image/gif, image/jpeg, image/png, image/jpg" onChange="displayInput(this);" />
+				<input name="userfile" type="file" value="Upload file" accept="image/*" onchange="showPreviewOne(event);" />
 			</form>
 		</div>
 		
