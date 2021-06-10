@@ -18,4 +18,4 @@ function displayImage(input) {
 
 
 
-ImageBitmap.height()
+//ImageBitmap.height()
