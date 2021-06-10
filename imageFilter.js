@@ -1,12 +1,12 @@
 function displayImage(input) {
         if (input.files && input.files[0]) {
-            var reader = new FileReader();
+                var reader = new FileReader();
+                var width = imageElement.naturalWidth;
+                var height = imageElement.naturalHeight;
 
             reader.onload = function (e) {
                 $('#uploadedImage')
                         .attr('src', e.target.result)
-                         var width = imageElement.naturalWidth;
-                         var height = imageElement.naturalHeight;
                         .width(400);
                         .height(400);
             };
