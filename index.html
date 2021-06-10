@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Image Filtering</title>
+		<script type="text/javascript" src="imageFiltering.js"></script>
 		
 	</head>
 	<body id="body">
@@ -15,9 +16,11 @@
 		
 		<div class="uploadedImage">
 			<form enctype="multipart/form-data" action="uploadfile.php" method="POST">
-				<input name="userfile" type="file" value="Upload file" accept="image/*" onchange="showPreviewOne(event);" />
+				<input name="userfile" type="file" id="file" accept="image/*" onchange="showPreviewOne(event)" style="display: none;" />
 			</form>
-			<img id="uploadedImage" src="https://i.ibb.co/ZVFsg37/default.png" />
+			<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+			
+			<img id="uploadedImage" width="200"  />
 		</div>
 		
 		<canvas width="300" height="300">
