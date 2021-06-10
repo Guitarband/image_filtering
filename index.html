@@ -16,10 +16,11 @@
 		
 		<div class="uploadedImage">
 			<form enctype="multipart/form-data" action="uploadfile.php" method="POST">
-			" Choose Image: "
-				<input name="userfile" type="file" value="Upload file">
+				<input name="userfile" type="file" value="Upload file" accept="image/gif, image/jpeg, image/png, image/jpg" onChange="displayInput(this);" />
 			</form>
 		</div>
+		
+		<img id="uploadedImage" src="#" />
 		
 		<canvas width="300" height="300">
 		  An alternative text describing what your canvas displays.
