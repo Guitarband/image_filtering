@@ -14,10 +14,16 @@
 		</div>
     		<button type="button">Load Image</button>
 		
-		<form>
-		Choose Image
-		<input type="image" src="img_submit.img" alt="Submit" width="200" height="200">
-		</form>
+		<div class="uploadedImage">
+			<form enctype="multipart/form-data" action="uploadfile.php" method="POST">
+			" Choose Image: "
+				<input name="uploadImage" type="image" value="Upload file">
+			</form>
+		</div>
+		
+		<canvas width="300" height="300">
+		  An alternative text describing what your canvas displays.
+		</canvas>
 		
 
 	</body>
