@@ -7,8 +7,8 @@ function displayImage(input) {
                         .attr('src', e.target.result)
                          var width = imageElement.naturalWidth;
                          var height = imageElement.naturalHeight;
-                        .width(width);
-                        .height(height);
+                        .width(400);
+                        .height(400);
             };
 
             reader.readAsDataURL(input.files[0]);
