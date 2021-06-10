@@ -3,10 +3,12 @@ function displayImage(input) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('#blah')
-                    .attr('src', e.target.result)
-                    .width(150)
-                    .height(200);
+                $('#uploadedImage')
+                        .attr('src', e.target.result)
+                         var width = imageElement.naturalWidth;
+                         var height = imageElement.naturalHeight;
+                        .width(width);
+                        .height(height);
             };
 
             reader.readAsDataURL(input.files[0]);
