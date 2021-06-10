@@ -5,6 +5,7 @@ function displayImage(input) {
                 var height = imageElement.naturalHeight;
 
             reader.onload = function (e) {
+                    document.getElementById("uploadedImage").src = 'e.target.result';
                 $('#uploadedImage')
                         .attr('src', e.target.result)
                         .width(400);
