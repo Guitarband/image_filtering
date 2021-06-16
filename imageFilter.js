@@ -12,7 +12,7 @@ function showPreviewOne(event){
             canvas = document.getElementById('cv');
             context = canvas.getContext('2d');
             var img = document.getElementById("uploadedImage");
-            context.drawImage(img);
+            context.drawImage(img, 100, 100);
 
       } 
     }
