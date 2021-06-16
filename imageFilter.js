@@ -11,7 +11,7 @@ function showPreviewOne(event){
 
             canvas = document.getElementById('cv');
             context = canvas.getContext('2d');
-            var img = document.getElementById("uploadedImage");
+            var img = document.getElementById("uploadedImage").src;
             context.drawImage(img, 100, 100);
 
       } 
