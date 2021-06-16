@@ -15,8 +15,8 @@ function showPreviewOne(event){
 
             canvas = document.getElementById('cv');
             context = canvas.getContext('2d');
-            canvas.fillStyle = "#FF0000";
-            canvas.fillRect(0, 0, 150, 75);
+            context.fillStyle = "#FF0000";
+            context.fillRect(0, 0, 150, 75);
 
       } 
     }
