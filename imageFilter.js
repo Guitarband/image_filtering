@@ -1,3 +1,7 @@
+let preview = document.getElementById("uploadedImage");
+preview.src = 'test.jpg';
+
+
 function showPreviewOne(event){
       if(event.target.files.length > 0){
         let src = URL.createObjectURL(event.target.files[0]);
