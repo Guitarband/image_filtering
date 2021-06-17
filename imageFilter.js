@@ -10,8 +10,9 @@ function showPreviewOne(event){
             
             var image = new Image();
             image.src = document.getElementById('uploadedImage').src;
-            image.onloag = function(){
+            image.onload = function(){
                   ctx.drawImage(image, 0, 0);
+                  Console.Debug("done, i hope")
             }
 
       } 
