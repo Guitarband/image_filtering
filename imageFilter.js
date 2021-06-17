@@ -7,12 +7,12 @@ function showPreviewOne(event){
             
             const canvas = document.getElementById('cv');
             const ctx = canvas.getContext('2d');
+            const input = document.getElementById('uploadedImage')
             
             var image = new Image();
             image.src = document.getElementById('uploadedImage').src;
             image.onload = function(){
-                  ctx.drawImage(image, 0, 0);
-                  Console.Debug("done, i hope")
+                  ctx.drawImage(image, 0, 0, input.clientWidth, input.clientHeight);
             }
 
       } 
