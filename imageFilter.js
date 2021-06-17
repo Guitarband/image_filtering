@@ -5,20 +5,22 @@ function showPreviewOne(event){
         preview.src = src;
         preview.style.display = "block";
             
-            context.drawImage(img, 100, 100);
-            context.drawImage(document.getElementById("uploadedImage"), 100, 100);
+            const canvas = document.getElementById('cv');
+            const ctx = canvas.getContext('2d');
+            var image = document.getElementById('uploadedImage');
+            ctx.drawImage(image, 21, 20);
 
       } 
     }
 
 
-const canvas = document.getElementById('cv');
+/*const canvas = document.getElementById('cv');
 const ctx = canvas.getContext('2d');
 var image = document.getElementById('uploadedImage');
 
 image.addEventListener('load', e => {
   ctx.drawImage(image, 21, 20);
 });
-
+*/
 
 //ImageBitmap.height()
