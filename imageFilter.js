@@ -5,14 +5,11 @@ function showPreviewOne(event){
         preview.src = src;
         preview.style.display = "block";
             
-            
-            var img = document.getElementById("scream");
-            var canvas, context;
-
-            canvas = document.getElementById('cv');
-            context = canvas.getContext('2d');
-            var img = document.getElementById("uploadedImage").src;
+            var canvas = document.getElementById('cv');
+            var context = canvas.getContext('2d');
+            var img = document.getElementById("uploadedImage");
             context.drawImage(img, 100, 100);
+            context.drawImage(document.getElementById("uploadedImage"), 100, 100);
 
       } 
     }
