@@ -12,7 +12,7 @@ function showPreviewOne(event){
             var image = new Image();
             image.src = document.getElementById('uploadedImage').src;
             
-            var imgd = ctx.getImageData(image);
+            var imgd = ctx.getImageData(60, 50, input.clientWidth, input.clientHeight);
             var pix = imgd.data;
             
             image.onload = function(){
