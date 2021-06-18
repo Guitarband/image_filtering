@@ -22,7 +22,7 @@ function showPreviewOne(event){
                       pix[i+2] = 255 - pix[i+2]; // blue
                       // i+3 is alpha (the fourth element)
                   }
-                  ctx.drawImage(image, 0, 0, input.clientWidth, input.clientHeight);
+                  ctx.putImageData(imgd, 0, 0, input.clientWidth, input.clientHeight);
             }
 
       } 
