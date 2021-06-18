@@ -1,4 +1,11 @@
+#upload{
+  top: 20px;
+  left: 60px;
+}
+
 #uploadedImage{
+  top: 60px;
+  left: 50px;
   max-width: 30%;
   max-height: 30%;
 }
