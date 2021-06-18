@@ -29,6 +29,31 @@ function showPreviewOne(event){
     }
 
 
+
+function putImageData(ctx, imageData) {
+  var data = imageData.data;
+  var height = imageData.height;
+  var width = imageData.width;
+  var limitBottom = dirtyY + dirtyHeight;
+  var limitRight = dirtyX + dirtyWidth;
+  for (var y = dirtyY; y < limitBottom; y++) {
+    for (var x = dirtyX; x < limitRight; x++) {
+      var pos = y * width + x;
+      ctx.fillStyle = 'rgba(' + data[pos*4+0]
+                        + ',' + data[pos*4+1]
+                        + ',' + data[pos*4+2]
+                        + ',' + (data[pos*4+3]/255) + ')';
+      ctx.fillRect(x + 60, y + 50, 1, 1);
+    }
+  }
+}
+
+// Create an ImageData object from it
+var imagedata = ctx.getImageData(60, 50, input.clientWidth, input.clientHeight);
+// use the putImageData function that illustrates how putImageData works
+putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
+
+
 /*const canvas = document.getElementById('cv');
 const ctx = canvas.getContext('2d');
 var image = document.getElementById('uploadedImage');
