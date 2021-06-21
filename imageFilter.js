@@ -16,7 +16,7 @@ function showPreviewOne(event){
             var data = imgData.data;
             
             image.onload = function(){
-                  for (var pixel of image.values()) 
+                  for (var pixel of Object.values(image)) 
                   {                     
                         pixel.setRed(255 - pixel.getRed());
                         pixel.setGreen(255 - pixel.getGreen());
