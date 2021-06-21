@@ -11,18 +11,8 @@ function showPreviewOne(event){
             
             var image = new Image();
             image.src = document.getElementById('uploadedImage').src;
-            
-            var imgd = ctx.getImageData(60, 50, input.clientWidth, input.clientHeight);
-            var pix = imgd.data;
-            
             image.onload = function(){
-                  for (var i = 0, n = pix.length; i < n; i += 4) {
-                      pix[i  ] = 255 - pix[i  ]; // red
-                      pix[i+1] = 255 - pix[i+1]; // green
-                      pix[i+2] = 255 - pix[i+2]; // blue
-                      // i+3 is alpha (the fourth element)
-                  }
-                  ctx.drawImage(imgd, 0, 0, input.clientWidth, input.clientHeight);
+                  ctx.drawImage(image, 0, 0, input.clientWidth, input.clientHeight);
             }
 
       } 
