@@ -21,7 +21,6 @@ function showPreviewOne(event){
                         pixel.setRed(255 - pixel.getRed());
                         pixel.setGreen(255 - pixel.getGreen());
                         pixel.setBlue(255 - pixel.getBlue()); 
-                        imgData.data[i+3] = imgData.data[i+3]; 
                   }
                   ctx.drawImage(image, 0, 0, input.clientWidth, input.clientHeight);
             }
