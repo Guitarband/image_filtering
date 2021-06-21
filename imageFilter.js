@@ -54,7 +54,7 @@ var imagedata = ctx.getImageData(60, 50, input.clientWidth, input.clientHeight);
 putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
 
 
-/*const canvas = document.getElementById('cv');
+const canvas = document.getElementById('cv');
 const ctx = canvas.getContext('2d');
 var image = document.getElementById('uploadedImage');
 
@@ -64,4 +64,4 @@ image.addEventListener('load', e => {
 */
 
 //ImageBitmap.height()
-*/
+
