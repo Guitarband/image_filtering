@@ -22,14 +22,14 @@ function showPreviewOne(event){
                       pix[i+2] = 255 - pix[i+2]; // blue
                       // i+3 is alpha (the fourth element)
                   }
-                  ctx.putImageData(imgd, 70 + input.clientHeight, 50);
+                  ctx.drawImage(imgd, 0, 0, input.clientWidth, input.clientHeight);
             }
 
       } 
     }
 
 
-
+/*
 function putImageData(ctx, imageData) {
   var data = imageData.data;
   var height = imageData.height;
@@ -64,3 +64,4 @@ image.addEventListener('load', e => {
 */
 
 //ImageBitmap.height()
+*/
