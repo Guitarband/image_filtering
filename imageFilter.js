@@ -10,21 +10,21 @@ function showPreviewOne(event){
             const input = document.getElementById('uploadedImage')
             
             var image = new Image();
+            image.src = document.getElementById('uploadedImage').src;
+            
             var imgData = ctx.getImageData(60,50, uploadedImage.width, uploadedImage.height);
             var data = imgData.data;
             
-            for (i = 0; i < data.length; i += 4) 
-            {                     
-                  imgData.data[i] = 255 - imgData.data[i];
-                  imgData.data[i+1] = 255 - imgData.data[i+1];
-                  imgData.data[i+2] = 255 - imgData.data[i+2]; 
-                  imgData.data[i+3] = imgData.data[i+3]; 
-            }
-            
-            image.src = document.getElementById('uploadedImage').src;
             image.onload = function(){
+                  for (var pixel of image.values()) 
+                  {                     
+                        pixel.setRed(255 - pixel.getRed());
+                        pixel.setGreen(255 - pixel.getGreen());
+                        pixel.setBlue(255 - pixel.getBlue()); 
+                        imgData.data[i+3] = imgData.data[i+3]; 
+                  }
                   ctx.drawImage(image, 0, 0, input.clientWidth, input.clientHeight);
-                  ctx.putImageData(imgData, 0, 0);
+                  print(imgData);
             }
 
       } 
