@@ -24,7 +24,6 @@ function showPreviewOne(event){
                         imgData.data[i+3] = imgData.data[i+3]; 
                   }
                   ctx.drawImage(image, 0, 0, input.clientWidth, input.clientHeight);
-                  print(imgData);
             }
 
       } 
